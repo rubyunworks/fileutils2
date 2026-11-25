@@ -1,5 +1,11 @@
 # FileUtils2
 
+> **This project is retired.** Ruby has since solved the problems it was
+> made for: FileUtils now takes keyword arguments, so there is no options
+> table to patch when extending it, and Ruby 3.0 fixed the module
+> inclusion problem. The code remains here for reference; it does not run
+> on current Ruby.
+
 *A Refactorization of Ruby's Standard FileUtils Library*
 
 [Homepage](http://rubyworks.github.com/fileutils2) /
@@ -198,23 +204,10 @@ for these test results.
 
 ## Why a Gem?
 
-You might be wondering why this is a Gem and not part of Ruby's standard library.
-Unfortunately, due to to what I believe to be nothing more than "clique politics"
-among some of the  Ruby Core members, this code has been rejected.
-
-Actually it was accepted, but after the discovery a bug (easily fixed) it was
-reverted. Despite the code passing all tests, and the fact that this bug made it
-clear that the tests themselves were missing something (that's a good thing to 
-discover!), the code was reverted to the old design. Sadly, I am certain there
-was no other reason for it than the simple fact that the three main core members
-from Seattle.rb begrudge me, and go out their way to undermine everything I do.
-This behavior is fairly well documented in the archives of the ruby-talk mailing
-list. I don't like to think that their personal opinions of me would influence
-the design of the Ruby programming language, which should be of the utmost
-professional character, but it is clearly not the case, as is evidenced by
-the fact that they were not willing to discuss the design, let alone actually fix
-it, but instead summarily declared themselves the new maintainers of the code,
-reverted the code to the old design and pronounced the issue closed. Period.
+This code was accepted into Ruby and shipped in its pre-releases up to
+2.0-rc1. After a bug turned up, the change was reverted to the old design,
+and a fix was not taken up. How it was handled was frustrating and felt
+unfair, honestly. So it was released as a gem instead.
 
 * https://bugs.ruby-lang.org/issues/4970
 * https://bugs.ruby-lang.org/issues/7958
